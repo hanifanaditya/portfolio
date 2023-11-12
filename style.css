@@ -402,7 +402,7 @@ nav-bar nav div ul li a{
 #project .project-item h3{
     position: relative;
     font-size: 20px;
-    color: blue;
+    color: rgb(0, 0, 0);
     text-transform: uppercase;
     margin: 0;
 }
@@ -420,7 +420,7 @@ nav-bar nav div ul li a{
 }
 #testimonial h2{
     position: relative;
-    margin-top: -70px;
+    margin-top: 0px;
     margin-bottom: 70px;
     color: black;
     font-size: 60px;
