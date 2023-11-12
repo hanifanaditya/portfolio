@@ -1,0 +1,571 @@
+/* font */
+  @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+}
+
+/* preloader */
+#preloader {
+    position: fixed;
+    background-color: #a1c2f3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.spinner {
+   position: relative;
+   width: 22.4px;
+   height: 22.4px;
+}
+
+.spinner::before,
+.spinner::after {
+   content: '';
+   width: 100%;
+   height: 100%;
+   display: block;
+   animation: spinner-b4c8mmmd 0.5s backwards, spinner-49opz7md 1.25s 0.5s infinite ease;
+   border: 5.6px solid #474bff;
+   border-radius: 50%;
+   box-shadow: 0 -33.6px 0 -5.6px #474bff;
+   position: absolute;
+}
+
+.spinner::after {
+   animation-delay: 0s, 1.25s;
+}
+
+@keyframes spinner-b4c8mmmd {
+   from {
+      box-shadow: 0 0 0 -5.6px #474bff;
+   }
+}
+
+@keyframes spinner-49opz7md {
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+
+/* header */
+header{
+    position: relative;
+    background-color: blue;
+}
+header > div:last-child{
+    color: #fff;
+    font-family: Roboto;
+    background: radial-gradient(circle, transparent, rgba(0, 0, 0, 0.9) 80%),
+                url(assets/img/various-computer-equipment-with-programming-code-screens-table-dark-room-cyber-security-concept-copy-space.jpg);
+    background-size: cover;
+    background-position: center;
+}
+header > div:last-child h6{
+    letter-spacing: 5px;
+}
+
+/* menu */
+header .menu{
+    border: 2px solid transparent;
+    border-radius: 5px;
+    height: 52px;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 99;
+    transition: .3s;
+}
+header .menu input{
+    display: none;
+}
+header .menu label{
+    cursor: pointer;
+}
+header .menu div{
+    width: 40px;
+    height: 3px;
+    color: red;
+    background-color: rgb(191, 191, 191);
+    margin: 10px 5px;
+    transition: 1s;
+}
+
+/* sidebar */
+.sidebar{
+    transition: 1s;
+}
+.sidebar nav{
+    position: relative;
+    background-color: rgb(14, 12, 12);
+    color: #c4c4c4 !important;
+    transition: .5s;
+}
+
+.sidebar nav .navbar-brand{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 0;
+    font-family: "Roboto Slab";
+}
+nav .navbar-brand mark{
+    color: red;
+    background-color: transparent;
+    padding: 0;
+}
+.sidebar nav .navbar-brand ~ p{
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-top: -5px;
+}
+
+.sidebar nav a.nav-link{
+    font-size: 20px;
+    color: #c4c4c4 !important;
+    animation: fadeInLeftBig;
+    animation-duration: 1s;
+}
+.sidebar nav a.nav-link:nth-child(1){
+    display: none;
+    animation: fadeInLeftBig;
+    animation-duration: 0.9s;
+}
+.sidebar nav a.nav-link:nth-child(3){
+    animation: fadeInLeftBig;
+    animation-duration: 1.1s;
+}
+.sidebar nav a.nav-link:nth-child(4){
+    animation: fadeInLeftBig;
+    animation-duration: 1.2s;
+}
+.sidebar nav a.nav-link:nth-child(5){
+    animation: fadeInLeftBig;
+    animation-duration: 1.3s;
+}
+.sidebar nav a.nav-link:nth-child(6){
+    animation: fadeInLeftBig;
+    animation-duration: 1.4s;
+}
+.sidebar nav a.nav-link:nth-child(7){
+    animation: fadeInLeftBig;
+    animation-duration: 1.5s;
+}
+
+nav a.nav-link.active,
+nav a.nav-link:hover{
+    color: #bd0000 !important;
+}
+
+.sidebar nav .sosmed p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.sidebar nav .sosmed div.d-flex img{
+    width: 20px;
+    margin: -10px 3px 25px;
+}
+
+/* navbar */
+nav-bar{
+    position: sticky;
+    top: 0;
+    z-index: 90;
+}
+nav-bar > div{
+    background-color: rgb(14, 12, 12);
+    color: #c4c4c4 !important;
+}
+nav-bar nav{
+    font-size: 20px;
+}
+nav-bar nav div.logo{
+    /* border: solid; */
+    text-align: center;
+}
+nav-bar nav div.logo a{
+    font-size: 25px;
+    font-weight: 600;
+    font-family: "Roboto Slab";
+    padding: 0;
+}
+nav-bar nav div.logo p{
+    font-size: 10px;
+    letter-spacing: 5px;
+    margin-top: -5px;
+}
+
+nav-bar nav div ul li a{
+    margin: 0 15px;
+    color: #c4c4c4 !important;
+}
+
+/* About */
+#about{
+    height: 100vh;
+    position: relative;
+    background-color: #a1c2f3;
+    padding: 120px 0;
+    text-align: center;
+    margin-top: -54px;
+    background: url(assets/img/1645834158_1-abrakadabra-fun-p-stol-temnii-fon-rakurs-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#about .container{
+    margin-top: 100px;
+}
+
+#about img {
+    width: 200px;
+    height: 200px;
+    border: 5px solid #cbcbcb;
+    border-radius: 50%;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: top center;
+    -o-object-position: top center;
+}
+
+#about h1 {
+    position: relative;
+    margin: 0;
+    padding: 25px 0;
+    color: #fff;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Black Ops One', cursive;
+}
+
+#about h5 {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+}
+
+/* Services */
+#services {
+    position: relative;
+    padding: 50px 0;
+    background: linear-gradient(180deg, transparent, #fff 70%) ,url(assets/img/background2.jpg);
+    /* background-size: contain; */
+    background-size: 900px;
+}
+
+#services::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: black;
+    position: absolute;
+    top: 0;
+}
+
+#services h2 {
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: black;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+#services .service-list{
+    position: relative;
+    padding: 15px 0;
+}
+#services .service-list .service-item{
+    position: relative;
+    margin-bottom: 25px;
+    text-align: center;
+}
+#services .service-list .service-item img{
+    width: 85%;
+    border-bottom: solid rgb(14, 12, 12);
+}
+#services .service-list .service-item h3{
+    color: black;
+    margin: 5px 0;
+    text-transform: uppercase;
+}
+#services .service-list .service-item p{
+    color: gray;
+    font-size: 18px;
+}
+#services .service-list .service-item a.btn{
+    background-color: transparent;
+    border: 3px solid black;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    margin-top: 5px;
+    width: 50%;
+    transition: .5s;
+}
+#services .service-list .service-item a.btn:hover{
+    background-color: transparent;
+    border: 3px solid #e40101;
+    color: #e40101;
+    transform: translateY(-5px);
+}
+
+/* skills */
+#skills{
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+#skills h2{
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+#skills .skill-list{
+    max-width: 100%;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#skills .skill-list > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: clamp(50px, 40%, 250px);
+    aspect-ratio: 1;
+    margin: 10px 2%;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px 3px rgba(159, 159, 159, 0.81);
+}
+#skills .skill-list > div img{
+    width: 75%;
+    height: 75%;
+    transition: .5s;
+}
+#skills .skill-list > div:hover > img{
+    width: 80%;
+    height: 80%;
+}
+
+/* Projects */
+#project{
+    position: relative;
+    background-color: #ffffff;
+    padding: 50px 0;
+}
+#project h2{
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    color: black;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+#project .project-item{
+    position: relative;
+    margin: 25px 0;
+}
+#project .project-item img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    -o-object-fit: cover;
+    object-position: center;
+    -o-object-position: center;
+    margin-bottom: 15px;
+}
+#project .project-item h3{
+    position: relative;
+    font-size: 20px;
+    color: blue;
+    text-transform: uppercase;
+    margin: 0;
+}
+#project .project-item h5{
+    position: relative;
+    color: #494949;
+    font-size: 16px;
+}
+
+/* Testimonial */
+#testimonial {
+    position: relative;
+    padding: 50px 0;
+    margin-top: -70px;
+}
+#testimonial h2{
+    position: relative;
+    margin-top: -70px;
+    margin-bottom: 70px;
+    color: black;
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+}
+#testimonial .carousel-item .carousel-content {
+    text-align: center;
+    padding: 0 100px;
+}
+#testimonial .carousel-item .carousel-content img{
+    width: 160px;
+    border: 4px solid blue;
+    margin-bottom: 15px;
+}
+#testimonial .carousel-item .carousel-content h5{
+    color: #06357a;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#testimonial .carousel-item .carousel-content p{
+    font-size: 18px;
+}
+
+/* Contact */
+#contact{
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -70px;
+    padding: 50px 0;
+    background: linear-gradient(180deg, transparent, #a1c2f3 80%);
+}
+#contact form{
+    position: relative;
+    max-width: 600px;
+    margin: 0px auto;
+}
+#contact form label{
+    color: #06357a;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#contact form input[type="text"],
+#contact form input[type="email"],
+#contact form textarea{
+    position: relative;
+    padding: 8px 10px;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border: 2px solid #06357a;
+}
+#contact form button[type="submit"]{
+    position: relative;
+    display: block;
+    width: 50%;
+    background-color: #06357a;
+    color: #fff;
+    border: 2px solid #06357a;
+    margin: 15px auto;
+}
+#contact form button[type="submit"]:hover{
+    background-color: transparent;
+    color: #06357a;
+}
+
+/* Footer */
+#footer{
+    position: relative;
+    padding: 10px;
+}
+#footer p{
+    position: relative;
+    text-align: center;
+    color: #06357a;
+    font-weight: 600;
+    margin: 0;
+}
+
+@media screen and (max-width: 1000px){
+    
+}
+
+/* mobile view */
+@media screen and (max-width: 900px) {
+
+    /* sidebar */
+    .sidebar nav:has(a.nav-link:hover){
+        background-color: rgba(14, 12, 12, 0.8) !important;
+    }
+    .sidebar nav a.nav-link:nth-child(1){
+        display: block;
+    }
+    header > div:nth-child(2){
+        display: none !important;
+    }
+    header > div:last-child{
+        width: 100%;
+    }
+    header .menu{
+        display: flex;
+        cursor: pointer;
+        z-index: 99;
+    }
+    header .menu:hover{
+        border: 2px solid rgb(156, 156, 156);
+    }
+    header .menu input:checked ~ label div:nth-child(1){
+        transform: rotate(45deg);
+        margin-top: 20px;
+    }
+    header .menu input:checked ~ label div:nth-child(2){
+        opacity: 0;
+    }
+    header .menu input:checked ~ label div:nth-child(3){
+        transform: rotateZ(-45deg);
+        margin-top: -25px;
+    }
+    
+    header .menu:has(input:checked) ~ div.sidebar{
+        display: flex !important;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 98;
+    }
+    header .menu:has(input:checked) ~ div.sidebar nav .div:first-child{
+        border: 1px solid white !important;
+    }
+
+    /* navbar */
+    nav-bar{
+        opacity: 0;
+        display: none;
+    }
+    nav-bar p{
+        display: none;
+    }
+
+    /* about */
+    #about{
+        margin-top: 0;
+    }
+}
